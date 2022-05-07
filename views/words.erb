@@ -1,0 +1,15 @@
+<h1>Fun With Words</h1>
+
+<h2>Words we want to learn!!</h2>
+
+<% if @words.any? %>
+  <ul>
+  <% @words.each do |word| %>
+    <li><a href="/words/<%= word.id %>"><%= word.name %></li> 
+  <% end %>
+  </ul>
+  <% else %>
+    <p>Please enter some words to get started.</p>
+  <% end %>
+
+<a href="/words/new">Add new words</a>
