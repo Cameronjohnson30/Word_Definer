@@ -16,13 +16,11 @@
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
-    <label for="definition_name"></label>
+    <label for="definition_name">Definition</label>
     <input id="definition_name" name="definition_name" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">submit</button>
 </form>
 
-
-
-<p><a href="/words/<%= @word.id %>/edit">Edit album</a></p>
+<p><a href="/words/<%= @word.id %>/edit">Edit word</a></p>
 <p><a href="/words">Return to word list</a></p>                                            
