@@ -9,11 +9,15 @@ class Word
     @id = id || @@total_rows += 1
   end
 
-  def self.all 
-    @@words.values()
-  end 
+  def definitions
+    Definition.find_by_word(self.id)
+  end
 
-  def save 
+  def self.all
+    @@words.values()
+  end
+
+  def save
     @@words[self.id] = Word.new(self.name, self.id)
   end
 
@@ -30,15 +34,11 @@ class Word
     @@words[id]
   end
 
-  def update(word)
+  def update(name)
     @name = name
   end
 
   def delete
     @@words.delete(self.id)
-  end
-
-  def definitions
-    Definition.find_by_word(self.id)
   end
 end
