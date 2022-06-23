@@ -56,8 +56,8 @@ describe ('Word') do
     it("updates a word by id") do
       word = Word.new("joke", nil)
       word.save()
-      word.update("yuppie")
-      expect(word.name).to(eq("yuppie"))
+      word.update("puppie")
+      expect(word.name).to(eq("puppie"))
     end
   end
 
